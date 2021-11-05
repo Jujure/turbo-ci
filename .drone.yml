@@ -5,6 +5,7 @@ steps:
   - name: publish
     image: plugins/docker
     settings:
-      repo: turboregistry:5000/turbo-ci
+      repo: turboregistry:5000/juju/turbo-ci
       tags: latest
       insecure: true
+      registry: turboregistry:5000
