@@ -9,3 +9,7 @@ steps:
       tags: latest
       insecure: true
       registry: turboregistry:5000
+      username:
+        from_secret: docker_username
+      password:
+        from_secret: docker_password
