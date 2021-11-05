@@ -7,3 +7,4 @@ steps:
     settings:
       repo: turboregistry:5000/turbo-ci
       tags: latest
+      insecure: true
