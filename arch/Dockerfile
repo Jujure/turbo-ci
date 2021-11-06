@@ -1,5 +1,7 @@
 FROM archlinux:base-devel
 
+LABEL maintainer="Julien CLEMENT <julien.clement@epita.fr> [https://juju.re]"
+
 RUN pacman -Syy
 
 RUN pacman -Sy --noconfirm gcc clang \
@@ -11,4 +13,5 @@ RUN pacman -Sy --noconfirm gcc clang \
         boost \
         openssl \
         llvm \
+        grub libisoburn arch-install-scripts mtools \
         && pacman -Scc --noconfirm
