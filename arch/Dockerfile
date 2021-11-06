@@ -5,7 +5,7 @@ LABEL maintainer="Julien CLEMENT <julien.clement@epita.fr> [https://juju.re]"
 RUN pacman -Syy
 
 RUN pacman -Sy --noconfirm gcc clang \
-        base-devel meson cmake autoconf autoconf-archive \
+        base-devel meson cmake autoconf autoconf-archive libtool \
         musl \
         python3 python-pip \
         gtest \
