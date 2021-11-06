@@ -1,11 +1,31 @@
+---
 kind: pipeline
-name: build
+name: build-alpine
 
 steps:
   - name: publish
     image: plugins/docker
     settings:
       repo: turboregistry:5000/juju/turbo-ci
+      dockerfile: alpine/Dockerfile
+      tags: latest
+      insecure: true
+      registry: turboregistry:5000
+      username:
+        from_secret: docker_username
+      password:
+        from_secret: docker_password
+
+---
+kind: pipeline
+name: build-arch
+
+steps:
+  - name: publish
+    image: plugins/docker
+    settings:
+      repo: turboregistry:5000/juju/turbo-ci-arch
+      dockerfile: arch/Dockerfile
       tags: latest
       insecure: true
       registry: turboregistry:5000
