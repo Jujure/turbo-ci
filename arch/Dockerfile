@@ -14,4 +14,8 @@ RUN pacman -Sy --noconfirm gcc clang \
         openssl \
         llvm \
         grub libisoburn arch-install-scripts mtools \
+        nasm \
+        rustup \
         && pacman -Scc --noconfirm
+
+RUN rustup override add nightly
